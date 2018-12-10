@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>rbswLoadStyles</name>
+        <scoped_name>x_93932_rbsw_navi_rbswLoadStyles</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 08:18:56</sys_created_on>
+        <sys_id>3111713b4f7313006c6f89dba310c758</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>rbswLoadStyles</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_macro_3111713b4f7313006c6f89dba310c758</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-15 08:23:37</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<g:evaluate var="jvar_stylesheets" object="true">
+		var stylesheets = [];
+			stylesheets.push('rbsw-Navi-Widget-Main');
+			stylesheets.push('rbsw-Navi-Widget-Header');
+			stylesheets.push('rbsw-Navi-Widget-Content');
+			stylesheets.push('rbsw-Navi-Widget-Footer');
+			stylesheets.push('rbsw-Navi-Widget-Item-Modal');
+			stylesheets.push('rbsw-Navi-Widget-Settings-Modal');
+		
+		var sheets = new GlideRecord('content_css');
+			sheets.addQuery('name', 'IN', stylesheets.join(','));
+			sheets.query();
+			sheets;
+	</g:evaluate>
+	<j:while test="${jvar_stylesheets.next()}">
+		<link href="${jvar_stylesheets.getValue('sys_id')}.cssdbx?v=${jvar_stylesheets.getValue('sys_updated_on')}" rel="stylesheet" type="text/css"/>
+	</j:while>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

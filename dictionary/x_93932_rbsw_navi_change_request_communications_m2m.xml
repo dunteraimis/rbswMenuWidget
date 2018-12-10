@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Change Request Communications" max_length="40" name="x_93932_rbsw_navi_change_request_communications_m2m" type="collection">
+        <element label="Change Request" max_length="32" name="change_request" reference="change_request" type="reference"/>
+        <element label="Publication" max_length="32" name="publication" reference="sn_publications_publication" type="reference"/>
+        <index name="index">
+            <element name="publication"/>
+        </index>
+        <index name="index2">
+            <element name="change_request"/>
+        </index>
+    </element>
+</database>

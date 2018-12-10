@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-12 18:32:50</sys_created_on>
+        <sys_id>64cb08414f6c23006c6f89dba310c72b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_93932_rbsw_navi_change_request_communications_m2m.x_93932_rbsw_navi.change_request_communications_user</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_security_acl display_value="x_93932_rbsw_navi_change_request_communications_m2m">2ccb08414f6c23006c6f89dba310c728</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_64cb08414f6c23006c6f89dba310c72b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-12 18:32:50</sys_updated_on>
+        <sys_user_role display_value="x_93932_rbsw_navi.change_request_communications_user" name="x_93932_rbsw_navi.change_request_communications_user">d8cb408d4f2c23006c6f89dba310c790</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

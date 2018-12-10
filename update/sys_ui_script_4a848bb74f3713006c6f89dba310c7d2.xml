@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_93932_rbsw_navi.rbswNaviWidget</name>
+        <script><![CDATA[function rbswWidgetInstance(widgetNode){
+    this.instanceId = widgetNode.getAttribute("rbsw-widget-id");
+
+    this.headerNode = widgetNode.querySelector(".rbsw-header");
+	this.footerNode = widgetNode.querySelector(".rbsw-footer");
+    this.contentNode = widgetNode.querySelector(".rbsw-content");
+    
+    this.modalContainerNode = widgetNode.querySelector(".rbsw-modal-container");
+	this.settingsModalNode = widgetNode.querySelector(".rbsw-settings-modal");
+    this.itemModalNode = widgetNode.querySelector(".rbsw-item-modal");
+    
+	this.content = new rbswNaviWidgetContent(this);
+    this.header = new rbswNaviWidgetHeader(this);
+	this.footer = new rbswNaviWidgetFooter(this);
+	this.itemModal = new rbswNaviWidgetItemMod(this);
+	
+	console.log(this);
+	/*
+    this.settingsModal = new rbswWidgetInstanceSettingsModal(this);
+	*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></script>
+        <script_name>rbswNaviWidget</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 14:27:45</sys_created_on>
+        <sys_id>4a848bb74f3713006c6f89dba310c7d2</sys_id>
+        <sys_mod_count>115</sys_mod_count>
+        <sys_name>x_93932_rbsw_navi.rbswNaviWidget</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_script_4a848bb74f3713006c6f89dba310c7d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 11:55:11</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

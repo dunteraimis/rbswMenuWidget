@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var activeWidgetNode = document.querySelector(".rbsw-container[rbsw-active-widget='true']");
+	activeWidgetNode.removeAttribute("rbsw-active-widget");
+
+var widgetInstance = new rbswWidgetInstance(activeWidgetNode);
+]]></client_script>
+        <description>Main UI page for navigation widget</description>
+        <direct>true</direct>
+        <endpoint>x_93932_rbsw_navi_rbsw-Navi-Widget.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:macro_invoke macro="x_93932_rbsw_navi_rbswLoadStyles" />
+
+	<g2:evaluate var="jvar_widget_id">
+		var widgetInstanceId = renderer.getPreference('portalWidgetId');
+			widgetInstanceId;
+	</g2:evaluate>
+	
+	 <div class="rbsw-container" rbsw-active-widget="true" rbsw-widget-id="$[jvar_widget_id]">
+		 <div class="rbsw-header">
+			 <p contenteditable="false" class="rbsw-header-title">Sample Title</p>
+			 <button class="rbsw-header-edit-btn btn"><i class="material-icons">mode_edit</i></button>
+		 </div>
+
+		 <div class="rbsw-content">
+			 <ul class="rbsw-content-list">
+				 <li class="rbsw-content-list-item">     
+					 <a class="rbsw-content-list-item-link" target="_blank" href="www.service-now.com">Sample Item 1</a>
+					 <button class="rbsw-content-list-item-move-btn btn"><i class="material-icons">reorder</i></button>
+					 <button class="rbsw-content-list-item-edit-btn btn"><i class="material-icons">mode_edit</i></button>
+					 <button class="rbsw-content-list-item-delete-btn btn"><i class="material-icons">delete</i></button>
+				 </li>
+				 <li class="rbsw-content-list-item">
+					 <a class="rbsw-content-list-item-link" target="_blank" href="www.service-now.com">Sample Item 1</a>
+					 <button class="rbsw-content-list-item-move-btn btn"><i class="material-icons">reorder</i></button>
+					 <button class="rbsw-content-list-item-edit-btn btn"><i class="material-icons">mode_edit</i></button>
+					 <button class="rbsw-content-list-item-delete-btn btn"><i class="material-icons">delete</i></button>
+				 </li>
+			 </ul>
+		 </div>
+
+		 <div class="rbsw-footer">
+			 <button class="rbsw-footer-settings-btn btn"><i class="material-icons">settings</i></button>
+			 <button class="rbsw-footer-new-item-btn btn"><i class="material-icons">add</i></button>
+		 </div>
+		 <div class="rbsw-modal-container rbsw-modal-hidden">
+			 <div class="rbsw-item-modal">
+				 <input class="rbsw-modal-item-title" type="text" placeholder="Title"/>
+				 <input class="rbsw-modal-item-url" type="text" placeholder="URL"/>
+				 
+				 <button class="rbsw-modal-close-btn btn"><i class="material-icons rbsw-btn-icon">clear</i></button>
+				 <button class="rbsw-modal-cancel-btn btn">Cancel</button>
+				 <button class="rbsw-modal-ok-btn btn">Ok</button>
+			 </div>
+					 
+			 
+			
+		 </div>
+	</div>	
+	
+	<g:macro_invoke macro="x_93932_rbsw_navi_rbswLoadScripts" />
+	
+</j:jelly>]]></html>
+        <name>rbsw-Navi-Widget</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-08 12:27:06</sys_created_on>
+        <sys_id>1766e2ed4f3313006c6f89dba310c79d</sys_id>
+        <sys_mod_count>126</sys_mod_count>
+        <sys_name>rbsw-Navi-Widget</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_page_1766e2ed4f3313006c6f89dba310c79d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-17 14:37:04</sys_updated_on>
+    </sys_ui_page>
+</record_update>

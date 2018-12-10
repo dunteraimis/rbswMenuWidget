@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>rbswLoadScripts</name>
+        <scoped_name>x_93932_rbsw_navi_rbswLoadScripts</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 08:27:44</sys_created_on>
+        <sys_id>3b8475bb4f7313006c6f89dba310c7da</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>rbswLoadScripts</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_macro_3b8475bb4f7313006c6f89dba310c7da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 11:38:41</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate var="jvar_scripts" object="true">
+		var scriptNames = [];
+			scriptNames.push('rbswNaviWidgetAjax');
+			scriptNames.push('rbswNaviWidget');
+			scriptNames.push('rbswNaviWidgetListItem');
+			scriptNames.push('rbswNaviWidgetContent');
+			scriptNames.push('rbswNaviWidgetItemMod');
+			scriptNames.push('rbswNaviWidgetFooter');
+			scriptNames.push('rbswNaviWidgetHeader');
+		
+		var scripts = new GlideRecord('sys_ui_script');
+			scripts.addActiveQuery();
+			scripts.addQuery('script_name', 'IN', scriptNames.join(','));
+			scripts.query();
+			scripts;
+	</g:evaluate>
+	
+	<j:while test="${jvar_scripts.next()}">
+		<g:requires name="${jvar_scripts.getValue('name')}.jsdbx" params="cache=${jvar_scipts.getValue('sys_updated_on')}" />  
+	</j:while>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

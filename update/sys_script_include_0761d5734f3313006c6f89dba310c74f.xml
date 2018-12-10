@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_93932_rbsw_navi.rbswNaviWidget</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>rbswNaviWidget</name>
+        <script><![CDATA[var rbswNaviWidget = Class.create();
+rbswNaviWidget.prototype = {
+    initialize: function() {
+    },
+
+	submitNewMenuItem: function(widgetInstance, menuItemTitle, menuItemLink, menuItemPosition){
+		var gr = new GlideRecord('u_rbsw_custom_navigation_menus');
+			gr.initialize();
+			gr.u_widget_instance = widgetInstance;
+			gr.u_menu_item_title = menuItemTitle;
+			gr.u_menu_item_link = menuItemLink;
+			gr.u_menu_item_position = menuItemPosition;
+		
+		return gr.insert();
+	},
+	
+	updateMenuItem: function(menuItemSysId, menuItemTitle, menuItemLink){
+		var gr = new GlideRecord('u_rbsw_custom_navigation_menus');
+		if(gr.get(menuItemSysId)){
+			gr.u_menu_item_title = menuItemTitle;
+			gr.u_menu_item_link = menuItemLink;
+			return gr.update();
+		}
+		return false;
+	},
+	
+	deleteMenuItem: function(menuItemSysId){
+		var gr = new GlideRecord("u_rbsw_custom_navigation_menus");
+		if(gr.get(menuItemSysId)){
+			return gr.deleteRecord();
+		}
+		return false;
+	},
+	
+	updateWidgetTitle: function(widgetInstance, newContainerTitle){
+		var answer = '';
+		
+		var gr = new GlideRecord('sys_portal_preferences');
+			gr.addQuery('portal_section', widgetInstance);
+			gr.addQuery('name', 'rbswCustomMenuTitle');
+			gr.query();
+		
+		if(gr.next()){
+			answer = gr.sys_id.toString();
+			gr.value = newContainerTitle;
+			gr.update();
+			
+		}
+		else{
+			var gr2 = new GlideRecord('sys_portal_preferences');
+				gr2.initialize();
+				gr2.portal_section = widgetInstance;
+				gr2.name = 'rbswCustomMenuTitle';
+				gr2.value = newContainerTitle;
+			answer = gr2.insert();
+		}
+		
+		return answer;
+	},
+	
+	updateNaviItemIdx: function(itemId, itemIdx){
+		var gr = new GlideRecord('u_rbsw_custom_navigation_menus');
+		if(gr.get(itemId)){
+			gr.u_menu_item_position = itemIdx;
+			gr.update();
+			return true;
+		}
+		else{
+			return false;
+		}
+	},
+	
+    type: 'rbswNaviWidget'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 05:53:32</sys_created_on>
+        <sys_id>0761d5734f3313006c6f89dba310c74f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>rbswNaviWidget</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_script_include_0761d5734f3313006c6f89dba310c74f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-15 05:54:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

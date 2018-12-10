@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_93932_rbsw_navi.rbswNaviWidgetHeader</name>
+        <script><![CDATA[/***HEADER***/
+function rbswNaviWidgetHeader(widgetInstance){
+    var wg = this.wg = widgetInstance;
+	
+    this.titleNode = wg.headerNode.querySelector(".rbsw-header-title");
+	this.titleEditBtnNode = wg.headerNode.querySelector(".rbsw-header-edit-btn");
+	this.titleEditBtnIconNode = this.titleEditBtnNode.querySelector("i");
+	
+	this.title = this.titleNode.innerHTML;
+	this.titleEditActive = false;
+	    
+    this.titleEditBtnNode.addEventListener("click", function(){
+		if(!wg.header.titleEditActive){
+			wg.header.titleEditOn();
+		}
+		else{
+			wg.header.titleEditOff();
+		}
+	});
+}
+
+rbswNaviWidgetHeader.prototype.titleEditOn = function(){
+    this.titleEditActive = true;
+    this.titleEditBtnIconNode.innerHTML = "done";
+	
+    this.titleEditBtnNode.classList.add("rbsw-visible");
+    this.wg.headerNode.classList.add("rbsw-header-edit-mode");
+	
+    this.titleNode.setAttribute("contenteditable", true);
+    this.titleNode.focus();
+};
+rbswNaviWidgetHeader.prototype.titleEditOff = function(){
+    this.titleEditBtnIconNode.innerHTML = "mode_edit";
+    this.titleEditActive = false;
+    this.titleEditBtnNode.classList.remove("rbsw-visible");
+    this.wg.headerNode.classList.remove("rbsw-header-edit-mode");
+    this.titleNode.setAttribute("contenteditable", false);
+    this.titleNode.blur();
+};
+rbswNaviWidgetHeader.prototype.updateInDb = function(){
+    if(this.title != this.titleNode.innerHTML){
+        //Update title in database
+    }
+};
+]]></script>
+        <script_name>rbswNaviWidgetHeader</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 11:20:42</sys_created_on>
+        <sys_id>00d8fc934f9023006c6f89dba310c70b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_93932_rbsw_navi.rbswNaviWidgetHeader</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_script_00d8fc934f9023006c6f89dba310c70b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 11:21:12</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

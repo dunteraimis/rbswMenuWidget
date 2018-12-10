@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>rbsw-Navi-Widget-Header</name>
+        <style>/*Header style starts*/&#13;
+.rbsw-header&#13;
+{&#13;
+  width: 100%;&#13;
+  height: var(--header-height);&#13;
+  background-color: var(--header-bg-color);&#13;
+  position: relative;&#13;
+  border-top-left-radius: 5px;&#13;
+  border-top-right-radius: 5px;&#13;
+}&#13;
+.rbsw-header-title&#13;
+{&#13;
+  padding-right: 40px;&#13;
+  padding-left: 30px;&#13;
+  color: var(--text-color);&#13;
+  text-align: center;&#13;
+  line-height: var(--header-height);&#13;
+  white-space: nowrap;&#13;
+  text-overflow: ellipsis; &#13;
+  font-size: 13pt;&#13;
+  font-weight: 900;&#13;
+  overflow: hidden;&#13;
+outline: none;&#13;
+}&#13;
+.rbsw-header-edit-btn&#13;
+{&#13;
+  color: var(--btn-color);&#13;
+  background: none;&#13;
+  border: none;&#13;
+outline: none;&#13;
+  position: absolute;&#13;
+  top: 5px;&#13;
+  right: 5px;&#13;
+  visibility: hidden;&#13;
+}&#13;
+.rbsw-header-edit-btn i{&#13;
+    vertical-align: middle;&#13;
+    font-size: 16px;&#13;
+}&#13;
+/*Header style ends*/&#13;
+/*Header style starts*/&#13;
+.rbsw-header *:hover ~ .rbsw-header-edit-btn&#13;
+{&#13;
+  cursor: pointer;&#13;
+  visibility: visible;&#13;
+}&#13;
+.rbsw-header-edit-btn:hover&#13;
+{&#13;
+  cursor: pointer;&#13;
+  visibility: visible;&#13;
+  background-color: var(--btn-hover-bg-color);&#13;
+  color: var(--btn-color);&#13;
+  border-radius: 10px;&#13;
+outline: none;&#13;
+}&#13;
+/*Header style ends*/&#13;
+.rbsw-header-edit-btn:active&#13;
+{&#13;
+    cursor: pointer;&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+    color: var(--btn-color-active);&#13;
+    border-radius: 10px;&#13;
+    border: none&#13;
+}&#13;
+.rbsw-header-edit-mode&#13;
+{&#13;
+background-color: var( --header-edit-bg-color); &#13;
+color: white;&#13;
+}&#13;
+</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-09 05:42:31</sys_created_on>
+        <sys_id>8d5596b14f3313006c6f89dba310c7e8</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>rbsw-Navi-Widget-Header</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>content_css_8d5596b14f3313006c6f89dba310c7e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-14 11:46:32</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>

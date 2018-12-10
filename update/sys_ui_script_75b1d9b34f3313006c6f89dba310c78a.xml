@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_93932_rbsw_navi.rbswNaviWidgetAjax</name>
+        <script><![CDATA[var RbswWidgetAjax = Class.create();
+
+RbswWidgetAjax.submitNewMenuItem = function(title, link, instance, newMenuItemNode, position){
+	var ga = new GlideAjax('rbswCustomNavMenusAjax');
+		ga.addParam('sysparm_name', 'submitMenuItem');
+		ga.addParam('sysparm_title', title);
+		ga.addParam('sysparm_link', link);
+		ga.addParam('sysparm_instance', instance);
+		ga.addParam('sysparm_position', position);
+		ga.getXMLAnswer(function(response){
+			if(response){
+				newMenuItemNode.setAttribute('rbsw-menu-item-id', response);
+			}
+		});
+};
+RbswWidgetAjax.updateMenuItemRecord = function(title, link, itemId){
+	var ga = new GlideAjax('rbswCustomNavMenusAjax');
+		ga.addParam('sysparm_name', 'updateMenuItem');
+		ga.addParam('sysparm_id', itemId);
+		ga.addParam('sysparm_title', title);
+		ga.addParam('sysparm_link', link);
+		ga.getXMLAnswer(function(response){
+			
+		});
+		
+};
+RbswWidgetAjax.deleteMenuItem = function(itemId){
+	var ga = new GlideAjax('rbswCustomNavMenusAjax');
+		ga.addParam('sysparm_name', 'deleteMenuItem');
+		ga.addParam('sysparm_id', itemId);
+		ga.getXMLAnswer(function(response){
+			
+		});
+};
+RbswWidgetAjax.updateWidgetRecordTitle = function(widgetInstanceId, widgetInstanceTitle){
+	var ga = new GlideAjax('rbswCustomNavMenusAjax');
+		ga.addParam('sysparm_name', 'updateWidgetTitle');
+		ga.addParam('sysparm_id', widgetInstanceId);
+		ga.addParam('sysparm_title', widgetInstanceTitle);
+		ga.getXMLAnswer(function(response){
+			
+		});
+};
+RbswWidgetAjax.updateNaviListIndeces = function(naviList){
+	var data = {};
+	naviList.forEach(function(listItem){
+		var listItemId = listItem.getAttribute("rbsw-menu-item-id");
+		var listItemIdx = listItem.getAttribute("rbsw-position");
+		data[listItemId] = listItemIdx;
+	});
+	
+	var ga = new GlideAjax('rbswCustomNavMenusAjax');
+		ga.addParam('sysparm_name', 'updateNaviListIndeces');
+		ga.addParam('sysparm_data', JSON.stringify(data));
+		ga.getXMLAnswer(function(response){
+			
+		});
+};]]></script>
+        <script_name>rbswNaviWidgetAjax</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 05:59:42</sys_created_on>
+        <sys_id>75b1d9b34f3313006c6f89dba310c78a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_93932_rbsw_navi.rbswNaviWidgetAjax</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_script_75b1d9b34f3313006c6f89dba310c78a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-15 08:09:05</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

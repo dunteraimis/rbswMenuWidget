@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>rbsw-Navi-Widget-Footer</name>
+        <style>/*Footer style starts*/&#13;
+.rbsw-footer&#13;
+{&#13;
+  width: 100%;&#13;
+  height: var(--footer-height);&#13;
+  background-color: var(--footer-bg-color);&#13;
+  position: relative;&#13;
+  border-bottom-left-radius: 5px;&#13;
+  border-bottom-right-radius: 5px;&#13;
+}&#13;
+.rbsw-footer-settings-btn&#13;
+{&#13;
+  color: var(--btn-color);&#13;
+  background: none;&#13;
+  border: none;&#13;
+  position: absolute;&#13;
+  bottom: 5px;&#13;
+  left: 5px;&#13;
+}&#13;
+.rbsw-footer-settings-btn i{&#13;
+    vertical-align: middle;&#13;
+    font-size: 16px;;&#13;
+}&#13;
+.rbsw-footer-new-item-btn&#13;
+{&#13;
+  color: var(--btn-color);&#13;
+  background: none;&#13;
+  border: none;&#13;
+  position: absolute;&#13;
+  bottom: 5px;&#13;
+  right: 5px;&#13;
+}&#13;
+.rbsw-footer-new-item-btn i{&#13;
+    vertical-align: middle;&#13;
+    font-size: 16px;        &#13;
+}&#13;
+/*Footer style ends*/&#13;
+/*Footer style starts*/&#13;
+.rbsw-footer-settings-btn:hover&#13;
+{&#13;
+  cursor: pointer;&#13;
+  background-color: var(--btn-hover-bg-color);&#13;
+  color: var(--btn-color);&#13;
+  border-radius: 10px;&#13;
+}&#13;
+.rbsw-footer-new-item-btn:hover&#13;
+{&#13;
+  cursor: pointer;&#13;
+  color: var(--btn-color);&#13;
+  background-color: var(--btn-hover-bg-color);&#13;
+  border-radius: 10px;&#13;
+}&#13;
+/*Footer style ends*/&#13;
+.rbsw-footer-settings-btn:active&#13;
+{&#13;
+    cursor: pointer;&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+    color: var(--btn-color-active);&#13;
+    border-radius: 10px;&#13;
+}&#13;
+.rbsw-footer-new-item-btn:active&#13;
+{&#13;
+    cursor: pointer;&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+    color: var(--btn-color-active);&#13;
+    border-radius: 10px;&#13;
+    outline: none;&#13;
+    border: none;&#13;
+}</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-09 05:43:28</sys_created_on>
+        <sys_id>e495d6b14f3313006c6f89dba310c7fd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>rbsw-Navi-Widget-Footer</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>content_css_e495d6b14f3313006c6f89dba310c7fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-17 12:37:59</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>

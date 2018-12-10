@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_93932_rbsw_navi.rbswNaviWidgetAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>rbswNaviWidgetAjax</name>
+        <script><![CDATA[var rbswNaviWidgetAjax = Class.create();
+rbswNaviWidgetAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	submitMenuItem: function(){
+		var instance = this.getParameter('sysparm_instance');
+		var title = this.getParameter('sysparm_title');
+		var link = this.getParameter('sysparm_link');
+		var position = this.getParameter('sysparm_position');
+		
+		return new rbswCustomNavMenus().submitNewMenuItem(instance, title, link, position);
+	},
+	updateMenuItem: function(){
+		var itemSysId = this.getParameter('sysparm_id');
+		var itemTitle = this.getParameter('sysparm_title');
+		var itemLink = this.getParameter('sysparm_link');
+		
+		return new rbswCustomNavMenus().updateMenuItem(itemSysId, itemTitle, itemLink);
+	},
+	deleteMenuItem: function(){
+		var itemSysId = this.getParameter('sysparm_id');
+		return new rbswCustomNavMenus().deleteMenuItem(itemSysId);
+	},
+	
+	updateWidgetTitle: function(){
+		var instance = this.getParameter('sysparm_id');
+		var title = this.getParameter('sysparm_title');
+		
+		return new rbswCustomNavMenus().updateWidgetTitle(instance, title);
+	},
+	
+	updateNaviListIndeces: function(){
+		var answer = true;
+		var listData = JSON.parse(this.getParameter('sysparm_data')); //This Does not work in scoped applications
+		
+		for(var itemId in listData){
+			var itemIdx = listData[itemId];
+			var update = new rbswCustomNavMenus().updateNaviItemIdx(itemId, itemIdx);
+			if(!update && answer){
+				answer = false;
+			}
+		}
+		return answer;
+	},
+	
+    type: 'rbswNaviWidgetAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 05:53:14</sys_created_on>
+        <sys_id>152155b34f3313006c6f89dba310c788</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>rbswNaviWidgetAjax</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_script_include_152155b34f3313006c6f89dba310c788</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-15 06:09:57</sys_updated_on>
+    </sys_script_include>
+</record_update>

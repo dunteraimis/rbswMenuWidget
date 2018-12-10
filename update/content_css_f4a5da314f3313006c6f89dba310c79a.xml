@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>rbsw-Navi-Widget-Item-Modal</name>
+        <style>.rbsw-modal-container&#13;
+{&#13;
+    position: absolute;&#13;
+    z-index: 5;&#13;
+    top: 0;&#13;
+    left: 0;&#13;
+    width: 100%;&#13;
+    height: 100%;&#13;
+    border-radius: 5px;&#13;
+    background-color: rgb(0,0,0); /* Fallback color */&#13;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */&#13;
+}&#13;
+.rbsw-item-modal&#13;
+{&#13;
+    position: absolute; &#13;
+    z-index: 6; &#13;
+    left: 5%;&#13;
+    top: 15%;&#13;
+    width: 90%; &#13;
+    height: 230px;&#13;
+    overflow: auto; &#13;
+    border-radius: 5px;&#13;
+    background-color: rgb(0,0,0); &#13;
+    background-color: rgba(0,0,0,0.7);&#13;
+}&#13;
+/*Close button*/&#13;
+.rbsw-modal-close-btn&#13;
+{&#13;
+    position: absolute;&#13;
+    top: 4px;&#13;
+    right: 0px;&#13;
+    background: none;&#13;
+    border: none;&#13;
+    outline: none; &#13;
+    color: var(--text-color);&#13;
+}&#13;
+.rbsw-modal-close-btn:hover&#13;
+{&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+    border-radius: 10px;&#13;
+}&#13;
+.rbsw-modal-close-btn:active&#13;
+{&#13;
+    color: var(--text-active-color);&#13;
+}&#13;
+.rbsw-modal-close-btn.i&#13;
+{&#13;
+    font-size: 30px;&#13;
+}&#13;
+/*-----------------------*/&#13;
+/*Cancel button*/&#13;
+.rbsw-modal-cancel-btn&#13;
+{&#13;
+    width: 75px;&#13;
+    position: absolute;&#13;
+    bottom: 20px;&#13;
+    left: calc(50% - 85px);&#13;
+    background: none;&#13;
+    border: 1px solid var(--text-color);&#13;
+    border-radius: 5px;&#13;
+    color: var(--text-color);&#13;
+}&#13;
+.rbsw-modal-cancel-btn:hover&#13;
+{&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+    border-radius: 5px;&#13;
+}&#13;
+.rbsw-modal-cancel-btn:active&#13;
+{&#13;
+    color: var(--text-active-color);&#13;
+    outline: none;&#13;
+}&#13;
+/*-----------------------*/&#13;
+&#13;
+/*Ok button*/&#13;
+.rbsw-modal-ok-btn&#13;
+{&#13;
+    width: 75px;&#13;
+    position: absolute;&#13;
+    bottom: 20px;&#13;
+    right: calc(50% - 85px);&#13;
+    background: none;&#13;
+    border: 1px solid var(--text-color);&#13;
+    border-radius: 5px;&#13;
+    color: var(--text-color);&#13;
+}&#13;
+.rbsw-modal-ok-btn:hover&#13;
+{&#13;
+    background-color: var(--btn-hover-bg-color);&#13;
+     border-radius: 5px;&#13;
+}&#13;
+.rbsw-modal-ok-btn:active&#13;
+{&#13;
+    color: var(--text-active-color);&#13;
+    outline: none;&#13;
+}&#13;
+/*-----------------------*/&#13;
+&#13;
+.rbsw-modal-item-title&#13;
+{&#13;
+    margin-top: 80px;&#13;
+    margin-bottom: 10px;&#13;
+    width: 80%;&#13;
+    margin-left: auto;&#13;
+    margin-right: auto;&#13;
+    display: block;&#13;
+    border-radius: 3px;&#13;
+}&#13;
+.rbsw-modal-item-url&#13;
+{&#13;
+    width: 80%;&#13;
+    margin-left: auto;&#13;
+    margin-right: auto;&#13;
+    display: block;&#13;
+    border-radius: 3px;&#13;
+}&#13;
+.rbsw-modal-hidden&#13;
+{&#13;
+display: none;&#13;
+}</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-09 05:43:47</sys_created_on>
+        <sys_id>f4a5da314f3313006c6f89dba310c79a</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>rbsw-Navi-Widget-Item-Modal</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>content_css_f4a5da314f3313006c6f89dba310c79a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-17 14:36:34</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>

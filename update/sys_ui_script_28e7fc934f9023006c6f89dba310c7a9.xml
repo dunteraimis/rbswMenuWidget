@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_93932_rbsw_navi.rbswNaviWidgetItemMod</name>
+        <script><![CDATA[/***ITEM MODAL***/
+function rbswNaviWidgetItemMod(widgetInstance){
+	var wg = this.wg  = widgetInstance;
+	
+	this.titleInputNode = wg.itemModalNode.querySelector(".rbsw-modal-item-title");
+	this.urlInputNode = wg.itemModalNode.querySelector(".rbsw-modal-item-url");
+	
+	this.okBtnNode = wg.itemModalNode.querySelector(".rbsw-modal-ok-btn");
+	this.okBtnNode.addEventListener("click", function(){
+		var item = new rbswNaviWidgetListItem();
+			item.initialize();
+	});
+	
+	this.cancelBtnNode = wg.itemModalNode.querySelector(".rbsw-modal-cancel-btn");
+	this.cancelBtnNode.addEventListener("click", function(){
+		wg.itemModal.hide();
+	});
+	
+	this.closeBtnNode = wg.itemModalNode.querySelector(".rbsw-modal-close-btn");
+	this.closeBtnNode.addEventListener("click", function(){
+		wg.itemModal.hide();
+	});
+	
+}
+
+rbswNaviWidgetItemMod.prototype.show = function(){
+    this.wg.itemModalNode.classList.remove("rbsw-modal-hidden");
+	this.wg.modalContainerNode.classList.remove("rbsw-modal-hidden");
+};
+rbswNaviWidgetItemMod.prototype.hide = function(){
+	this.wg.itemModalNode.classList.add("rbsw-modal-hidden");
+	this.wg.modalContainerNode.classList.add("rbsw-modal-hidden");
+};
+rbswNaviWidgetItemMod.prototype.setTitle = function(title){
+	this.titleInputNode.value = title;
+};
+rbswNaviWidgetItemMod.prototype.setUrl = function(url){
+	this.urlInputNode.value = url;
+};
+
+
+]]></script>
+        <script_name>rbswNaviWidgetItemMod</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 11:16:51</sys_created_on>
+        <sys_id>28e7fc934f9023006c6f89dba310c7a9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_93932_rbsw_navi.rbswNaviWidgetItemMod</sys_name>
+        <sys_package display_value="[rbsw] Navi Widget" source="x_93932_rbsw_navi">c7b02e694f3313006c6f89dba310c704</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[rbsw] Navi Widget">c7b02e694f3313006c6f89dba310c704</sys_scope>
+        <sys_update_name>sys_ui_script_28e7fc934f9023006c6f89dba310c7a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 12:53:09</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

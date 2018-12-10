@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Navi Item" max_length="40" name="x_93932_rbsw_navi_item" type="collection">
+        <element label="Position" max_length="40" name="position" type="integer"/>
+        <element display="true" label="Title" max_length="255" name="title" type="string_full_utf8"/>
+        <element label="URL" max_length="1024" name="url" type="url"/>
+        <element default="javascript: gs.getUserID();" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="Widget Instance" max_length="255" name="widget_instance" type="string_full_utf8"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
